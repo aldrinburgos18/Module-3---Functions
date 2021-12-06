@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My First Function</title>
+  </head>
+  <body>
+    <h1 style="text-align:center; margin-top:20%;">
+      Open the console to see the functions at work!
+    </h1>
+
+    <script type="text/javascript">
+      // TODO: Create a function called "adder" that takes three arguments (x, y, z) and returns their sum
+      function adder(x, y, z) {
+          var sum = x + y + z;
+          return sum;
+      }
+
+      // TODO: Create a function called "multiplier" that takes three arguments (x, y, z) and returns their product
+      function multiplier(x, y, z) {
+        var product = x * y * z;
+        return product;
+      }
+
+      // TODO: Create a function called "isString" that takes three arguments (x, y, z) and checks if the type of all three is a string
+      function isString(x, y, z) {
+        if(typeof x === "string" && typeof y === "string" && typeof z === "string") {
+         return "All three are strings."
+        } else {
+         return "One or more are not string(s)."
+        }
+      }
+
+      // TODO: Create a function called "vowelChecker" that takes one argument (x) and checks if the first letter is a vowel
+      function vowelChecker(x) {
+        const vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'];
+        
+        if(vowels.includes(x.charAt(0))) {
+          return "First letter is a vowel!"
+        } else {
+          return "First letter is NOT a vowel!"
+        }
+      }
+ 
+      // Check the browser console to see if the following is logged correctly
+      var sum = adder(1, 2, 3);
+
+      console.log('The result of adder() is ' + sum);
+
+      var product = multiplier(2, 3, 4);
+
+      console.log('The result of multiplier() is ' + product); 
+
+      var stringCheckOne = isString('Jared', 'Bad', 'Monkey');
+
+      console.log(stringCheckOne);
+
+      var stringCheckTwo = isString(2, 'Way', 'Street');
+
+      console.log(stringCheckTwo);
+
+      var vowelCheckOne = vowelChecker('Eek');
+
+      console.log(vowelCheckOne);
+
+      var vowelCheckTwo = vowelChecker('Nah');
+
+      console.log(vowelCheckTwo);
+    </script>
+  </body>
+</html>
